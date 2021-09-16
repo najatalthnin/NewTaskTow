@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Login</title>
+        
+        <link href="loginstyle.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="jquery-3.6.0.min.js" ></script>
+
+        <script type="text/javascript">
+         $(document).ready(function(){
+           
+
+$("#buttonlogin").click(function(){ 
+
+    var username=$("#txtUsername").val();
+    var password=$("#txtPassword").val();
+
+    if(username==''  || password=='' ){
+
+        $("#showmsg").removeClass("hideBox");
+        $("#showmsg").addClass("showBox");}
+        
+        else{
+            window.location.href="home.html";
+        }
+    });
+       
+    
+      $("#pic").click(function(){
+
+        $("#showmsg").addClass("hideBox");
+        $("#showmsg").removeClass("showBox");
+        
+
+        
+
+});
+        
+      
+
+});
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+
+
+    </head>
+    <body>
+
+        <div class="box">
+            <h2>Login</h2>
+            <form>
+                <div class="inputBox">
+                    <label>Username</label>
+    
+                    <input type="text" id="txtUsername" />
+                </div>
+                <div class="inputBox">
+                    <label>Password</label>
+    
+                    <input type="password" id="txtPassword" />
+                </div>
+                <input type="button" value="Sign In" onclick="login()"  id=buttonlogin />
+            </form>
+            <div class="hideBox" id="showmsg">
+                <label>Please Enter Username & Password</label>
+                <img src="/Images/Icons/Close.png" width="20" id=pic />
+            </div>
+        </div>
+
+    </body>
+</html>
